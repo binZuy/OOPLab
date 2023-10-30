@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<libraryInfos>
+    <libraryInfo home="C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2023.2.2\jbr" version="17.0.8"/>
+    <libraryInfo home="C:\Users\duyng\.vscode\extensions\redhat.java-1.23.0-win32-x64\jre\17.0.8.1-win32-x86_64" version="17.0.8.1"/>
+    <libraryInfo home="C:\Program Files\Java\jdk-21" version="21"/>
+    <libraryInfo home="C:\Program Files\astah-UML" version="1.8.0_372">
+        <bootpath>
+            <entry path="C:\Program Files\astah-UML\jre\lib\resources.jar"/>
+            <entry path="C:\Program Files\astah-UML\jre\lib\rt.jar"/>
+            <entry path="C:\Program Files\astah-UML\jre\lib\sunrsasign.jar"/>
+            <entry path="C:\Program Files\astah-UML\jre\lib\jsse.jar"/>
+            <entry path="C:\Program Files\astah-UML\jre\lib\jce.jar"/>
+            <entry path="C:\Program Files\astah-UML\jre\lib\charsets.jar"/>
+            <entry path="C:\Program Files\astah-UML\jre\lib\jfr.jar"/>
+            <entry path="C:\Program Files\astah-UML\jre\classes"/>
+        </bootpath>
+        <extensionDirs>
+            <entry path="C:\Program Files\astah-UML\jre\lib\ext"/>
+            <entry path="C:\WINDOWS\Sun\Java\lib\ext"/>
+        </extensionDirs>
+        <endorsedDirs>
+            <entry path="C:\Program Files\astah-UML\jre\lib\endorsed"/>
+        </endorsedDirs>
+    </libraryInfo>
+</libraryInfos>

@@ -1,0 +1,8 @@
+package lab02;
+
+public class Aims {
+	public static void main(String argv[]) {
+		int anar[] = new int[] {1,7,9};
+		System.out.println(anar[1]);
+	}
+}
