@@ -1,0 +1,11 @@
+Nguyen Minh Duy - 20210270
+************* LAB02 ************
+
+1. If you create a constructor method to build a DVD by title then create a constructor method to build
+a DVD by category. Does JAVA allow you to do this?
+
+    Giống như phương thức trong Java, Java cho phép tạo ra các constructor với các danh sách tham số khác nhau.
+    Java phân biệt các constructor bởi tổng tham số truyền và kiểu của chúng và khi người lập trình không tạo constructor 
+    thì java sẽ tạo ra constructor mặc định không có tham số 
+
+

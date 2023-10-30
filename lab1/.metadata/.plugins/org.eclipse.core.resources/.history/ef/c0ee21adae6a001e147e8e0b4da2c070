@@ -1,0 +1,16 @@
+package exercise;
+import java.util.Scanner;
+public class DisplayStars {
+	public static void main(String[] args) {
+		Scanner nhapdulieu = new Scanner(System.in);
+		System.out.println("n = ");
+		int iInt = nhapdulieu.nextInt();
+		for (int i = 1; i <= iInt; i++) {
+			for (int j = 1; j <= i; j++) {
+				System.out.print("*");
+			}
+			System.out.print("\n");
+		}
+		System.exit(0);
+	}
+}

@@ -1,0 +1,6 @@
+INDEX VERSION 1.134+C:\Users\duyng\OneDrive - Hanoi University of Science and Technology\Desktop\lab1\.metadata\.plugins\org.eclipse.jdt.core
+1186225930.index
+3326914235.index
+3602257789.index
+1865797976.index
+3113725113.index
