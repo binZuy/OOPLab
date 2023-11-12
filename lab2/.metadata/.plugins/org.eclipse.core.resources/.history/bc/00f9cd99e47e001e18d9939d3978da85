@@ -62,11 +62,13 @@ public class Cart {
 					qtyOrdered++;
 					itemsOrdered[qtyOrdered]= dvd2;
 					qtyOrdered++;
-				System.out.println("DVD " + dvd1.getTitle()+ " and " + dvd2.getTitle() + 
-						" are added.");
+				}
+				System.out.println("DVD " + dvd1.getTitle()+ "and " + dvd2.getTitle() + 
+						"are added.");
 			}
 			else 
 				System.out.println("Your cart is almost full.");
+		}
 		}
 }
 	
