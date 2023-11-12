@@ -23,10 +23,6 @@ public class DigitalVideoDisc {
 	public float getCost() {
 		return cost;
 	}
-	// Tao setter cho title 
-	public void setTitle(String title) {
-		this.title = title;
-	}
 	
 	// Tao Constructor
 	public DigitalVideoDisc(String title) {
