@@ -1,8 +1,4 @@
 INDEX VERSION 1.134+C:\Users\duyng\OneDrive - Hanoi University of Science and Technology\Desktop\Java_OOP\BaoCaoOOP\oolt.vn.20231.20210270.nguyenminhduy\lab2\.metadata\.plugins\org.eclipse.jdt.core
 3413270776.index
-198626056.index
-<<<<<<< HEAD
 2295673916.index
-=======
->>>>>>> master
 1865797976.index
