@@ -9,7 +9,7 @@ public class DigitalVideoDisc {
 	
 	// Tao instance variable
 	private static int nbDigitalVideoDiscs = 0;
-	private int id;
+	private static int id;
 	
 	public int getId() {
 		return id;

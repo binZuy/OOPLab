@@ -37,7 +37,7 @@ public class Cart {
 	public float totalCost() {
 		float total= 0F;
 		for (int i =0 ; i < qtyOrdered; i++ ) {//In ra list order
-			//System.out.println((i+1)+"\t"+itemsOrdered[i].getTitle()+"\t"+itemsOrdered[i].getCost());
+			System.out.println((i+1)+"\t"+itemsOrdered[i].getTitle()+"\t"+itemsOrdered[i].getCost());
 			total+= itemsOrdered[i].getCost();
 		}
 		return total;
@@ -87,12 +87,11 @@ public class Cart {
 		// Tim DVD bang ID
 		public void searchById(int id) {
 			for (DigitalVideoDisc dvd : itemsOrdered) {
-				if (dvd != null && dvd.getId() == id ) {
-					System.out.println("DVD found: " + dvd.toString());
+				if (dvd.getId() == id) {
+					System.out.println("DVD found: " +dvd.toString());
 					return;
 				}
 			}
-			// Neu khong co dvd thoa man
 			System.out.println("No matching DVD found with ID "+ id);
 		}
 		
@@ -100,13 +99,13 @@ public class Cart {
 		public void searchByTitle(String title) {
 		        boolean found = false;
 		        for (DigitalVideoDisc dvd : itemsOrdered) {
-		            if (dvd != null && dvd.isMatch(title) ) {
+		            if (dvd.isMatch(title)) {
 		                System.out.println("Matching DVD found: " + dvd.toString());
 		                found = true;
 		            }
 		        }
-		        if (!found) { // Neu khong co dvd thoa man
-		            System.out.println("No matching DVD found with Title " + title);
+		        if (!found) {
+		            System.out.println("No matching DVD found with title " + title);
 		        }
 		}
 }

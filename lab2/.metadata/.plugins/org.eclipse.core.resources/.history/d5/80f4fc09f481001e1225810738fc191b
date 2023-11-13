@@ -73,8 +73,8 @@ public class DigitalVideoDisc {
 
 	//Tao chuc nang print cart 
 	public String toString() {
-			return String.format("DVD %s - %s - %s - %d minutes: %.2f $"
-					,title, category,director,length,cost);
+			return String.format("DVD %s - %s - %s - %d - %d minutes: %.2f $"
+					,title, category,director,id,length,cost);
 	}
 	
 	public boolean isMatch(String titleToMatch) {
