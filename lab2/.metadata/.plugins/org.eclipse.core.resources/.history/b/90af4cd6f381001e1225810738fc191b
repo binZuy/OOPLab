@@ -9,7 +9,7 @@ public class DigitalVideoDisc {
 	
 	// Tao instance variable
 	private static int nbDigitalVideoDiscs = 0;
-	private int id;
+	private static int id;
 	
 	public int getId() {
 		return id;
@@ -73,8 +73,8 @@ public class DigitalVideoDisc {
 
 	//Tao chuc nang print cart 
 	public String toString() {
-			return String.format("DVD %s - %s - %s - %d minutes: %.2f $"
-					,title, category,director,length,cost);
+			return String.format("DVD %s - %s - %s - %d - %d minutes: %.2f $"
+					,title, category,director,id,length,cost);
 	}
 	
 	public boolean isMatch(String titleToMatch) {
