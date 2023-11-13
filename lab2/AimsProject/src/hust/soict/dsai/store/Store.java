@@ -1,4 +1,6 @@
-package lab02;
+package hust.soict.dsai.store;
+
+import hust.soict.dsai.disc.DigitalVideoDisc;
 
 public class Store {
 		private DigitalVideoDisc[] itemsInStore;

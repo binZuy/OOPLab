@@ -1,4 +1,6 @@
-package lab02;
+package hust.soict.dsai.test.disc;
+
+import hust.soict.dsai.disc.*;
 
 public class TestPassingParameter {
 

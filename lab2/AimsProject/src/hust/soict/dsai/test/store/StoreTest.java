@@ -1,4 +1,7 @@
-package lab02;
+package hust.soict.dsai.test.store;
+
+import hust.soict.dsai.disc.*;
+import hust.soict.dsai.store.*;
 
 public class StoreTest {
 
