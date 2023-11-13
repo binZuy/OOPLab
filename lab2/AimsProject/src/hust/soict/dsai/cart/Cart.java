@@ -1,4 +1,4 @@
-package hust.soict.dsai.aims.cart;
+package hust.soict.dsai.cart;
 
 import hust.soict.dsai.disc.DigitalVideoDisc;
 
