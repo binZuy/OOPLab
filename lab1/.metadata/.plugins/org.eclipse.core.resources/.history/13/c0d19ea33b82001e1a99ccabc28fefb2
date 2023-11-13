@@ -1,0 +1,26 @@
+Hello, this is a sample text file.
+It contains multiple lines of text.
+You can add any content you like here.
+Feel free to modify and experiment with it.
+- Create a new class GarbageCreator. Create “garbage” as much as possible and observe when you run a program (it should let the program hangs or even stop working when too much “garbage”). Write another class NoGarbage to solve the problem.
+Some suggestions:
+- Read a text/binary file to a String without using StringBuffer to concatenate String (only use + operator). Observe and capture your screen when you choose a very long file
+- Improve the code using StringBuffer. 
+The following piece of code is a suggestion for your implementation
+
+In your Java program, specifically in the GarbageCreator class, the test.txt file should be located at the path you specified in the filename variable. In your case, it should be at the following path:
+
+java
+Copy code
+String filename = "C:\\Users\\duyng\\OneDrive - Hanoi University of Science and Technology\\Desktop\\Java_OOP\\BaoCaoOOP\\oolt.vn.20231.20210270.nguyenminhduy\\lab1\\OtherProjects\\src\\hust\\soict\\dsai\\garbage\\test.txt";
+To ensure that the file is in the correct location:
+
+Check the path: Make sure that the file exists at the specified path. You can navigate to the location in your file explorer and verify that the test.txt file is present.
+
+Adjust the path if needed: If the file is not at the specified path, you may need to adjust the filename variable to reflect the correct path where the test.txt file is located.
+
+Ensure correct permissions: Ensure that the Java program has read permissions for the file. If the program doesn't have the necessary permissions, it might encounter issues reading the file.
+
+Check for typos: Verify that there are no typos or errors in the file path. Even a small mistake in the path can result in the program not finding the file.
+
+Once you have confirmed the correct location of the test.txt file and addressed any issues with the file path, the program should be able to read the file successfully.
