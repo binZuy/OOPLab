@@ -8,4 +8,12 @@ a DVD by category. Does JAVA allow you to do this?
     Java phân biệt các constructor bởi tổng tham số truyền và kiểu của chúng và khi người lập trình không tạo constructor 
     thì java sẽ tạo ra constructor mặc định không có tham số 
 
+************* LAB03 ************
+Question: Is JAVA a Pass By Value  or a Pass By Reference programming language?
 
+    JAVA là ngôn ngữ "Truyền tham trị"(Pass By Value). 
+    Đó là khi bạn truyền một kiểu dữ liệu nguyên thủy vào một phương thức, bạn truyền giá trị thực sự của biến đó.
+    Khi bạn truyền một đối tượng vào một phương thức, bạn truyền giá trị của tham chiếu không phải là đối tượng thực sự. 
+    Bất kỳ thay đổi nào được thực hiện trên tham số bên trong 1 phương thức đều không ảnh hưởng đến biến gốc bên ngoài phương thức
+    Cụ thể trong Lab 3: Title của 2 đối tượng jungleDVD và cinderellaDVD trong lớp TestPassingParameter với hàm swap cũng không thể thay đổi được title thực sự của đối tượng.
+    
