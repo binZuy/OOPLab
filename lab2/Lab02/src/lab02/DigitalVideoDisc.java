@@ -6,10 +6,14 @@ public class DigitalVideoDisc {
 	private String director;
 	private int length;
 	private float cost;
-
+	
 	// Tao instance variable
 	private static int nbDigitalVideoDiscs = 0;
-	private static int id;
+	private int id;
+	
+	public int getId() {
+		return id;
+	}
 	
 	// Tao getters and setters
 	public String getTitle() {
@@ -66,4 +70,15 @@ public class DigitalVideoDisc {
 		nbDigitalVideoDiscs++;
 		id = nbDigitalVideoDiscs;
 	}
+
+	//Tao chuc nang print cart 
+	public String toString() {
+			return String.format("DVD %s - %s - %s - %d minutes: %.2f $"
+					,title, category,director,length,cost);
+	}
+	
+	public boolean isMatch(String titleToMatch) {
+		return title.toLowerCase().contains(titleToMatch.toLowerCase());
+	}
 }
+	
