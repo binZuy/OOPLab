@@ -16,4 +16,5 @@ Question: Is JAVA a Pass By Value  or a Pass By Reference programming language?
     Khi bạn truyền một đối tượng vào một phương thức, bạn truyền giá trị của tham chiếu không phải là đối tượng thực sự. 
     Bất kỳ thay đổi nào được thực hiện trên tham số bên trong 1 phương thức đều không ảnh hưởng đến biến gốc bên ngoài phương thức
     Cụ thể trong Lab 3: Title của 2 đối tượng jungleDVD và cinderellaDVD trong lớp TestPassingParameter với hàm swap cũng không thể thay đổi được title thực sự của đối tượng.
-    
+    Hàm swap không đổi là vì hàm này chỉ đổi chỗ 2 biến cục bộ mới được tạo của 2 đối tượng chứ không phải 2 đối tượng thực sự. 
+    Hàm changeTitle chỉ làm thay đổi tiêu đề của bản sao jungleDVD bên trong chứ không làm thay đổi jungleDVD mà tham chiếu tới nên tiêu đề của biến jungleDVD bên trong phương thức. 
