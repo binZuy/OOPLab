@@ -6,8 +6,8 @@ public class DigitalVideoDisc {
 	private String director;
 	private int length;
 	private float cost;
-
-	// Tao instance variable
+	
+	// Tao instance variables
 	private static int nbDigitalVideoDiscs = 0;
 	private static int id;
 	
