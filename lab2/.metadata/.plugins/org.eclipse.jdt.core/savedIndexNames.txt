@@ -1,10 +1,5 @@
 INDEX VERSION 1.134+C:\Users\duyng\OneDrive - Hanoi University of Science and Technology\Desktop\Java_OOP\BaoCaoOOP\oolt.vn.20231.20210270.nguyenminhduy\lab2\.metadata\.plugins\org.eclipse.jdt.core
-1186225930.index
-3602257789.index
-2730459363.index
-3326914235.index
-3413270776.index
 198626056.index
-1865797976.index
 2315386619.index
-3113725113.index
+3413270776.index
+1865797976.index

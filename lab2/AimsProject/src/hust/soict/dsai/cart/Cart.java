@@ -2,11 +2,10 @@ package hust.soict.dsai.cart;
 
 import java.util.ArrayList;
 
-import hust.soict.dsai.aims.media.DigitalVideoDisc;
 import hust.soict.dsai.aims.media.Media;
 
 public class Cart {
-	public static final int MAX_NUMBERS_ORDERED = 6;
+	public static final int MAX_NUMBERS_ORDERED = 20;
 	private ArrayList<Media> itemsOrdered = new ArrayList<Media>();
 	
 	// add Media and Remove Media methods
