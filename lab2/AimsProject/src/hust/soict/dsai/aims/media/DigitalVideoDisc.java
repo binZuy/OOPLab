@@ -1,6 +1,6 @@
 package hust.soict.dsai.aims.media;
 
-public class DigitalVideoDisc extends Disc{
+public class DigitalVideoDisc extends Disc implements Playable{
 	//private String director;
 	//private int length;
 	// Tao instance variable
@@ -32,6 +32,12 @@ public class DigitalVideoDisc extends Disc{
 	
 	public boolean isMatch(String titleToMatch) {
 		return getTitle().toLowerCase().contains(titleToMatch.toLowerCase());
+	}
+	
+	// play() method 
+	public void play() {
+		System.out.println("Playing DVD: " + getTitle());
+		System.out.println("DVD length: " + getLength() + " minutes");
 	}
 }
 	
