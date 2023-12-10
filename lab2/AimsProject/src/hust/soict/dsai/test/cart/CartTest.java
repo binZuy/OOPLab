@@ -1,7 +1,7 @@
 package hust.soict.dsai.test.cart;
 
+import hust.soict.dsai.aims.media.DigitalVideoDisc;
 import hust.soict.dsai.cart.Cart;
-import hust.soict.dsai.disc.DigitalVideoDisc;
 
 public class CartTest {
 

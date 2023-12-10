@@ -14,7 +14,7 @@ public class InputFromKeyboard {
 		// similar to other data types
 		// nextByte(), nextShort(), nextLong()
 		// nextFloat(), nextBoolean()
-		
+		keyboard.close();
 		System.out.println("Mrs/Ms. " + strName + ", " + iAge +" years old." + "Your height is " +dHeight+ "m.");
 	}
 }

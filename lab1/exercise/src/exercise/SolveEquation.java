@@ -12,7 +12,7 @@ public class SolveEquation {
 
         System.out.print("b = ");
         double b = scanner.nextDouble();
-
+        scanner.close();
         if (a != 0) {
             double solution = -b / a;
             System.out.println("The solution is: " + solution);

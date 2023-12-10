@@ -12,6 +12,7 @@ public class findDays {
         System.out.print("Input a month number: ");
         month = input.nextInt();
         } while(month > 12 || month <=0);
+        input.close();
         System.out.print("Input a year: ");
         int year = input.nextInt();
         switch (month) {
