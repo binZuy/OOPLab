@@ -40,5 +40,9 @@ public class Store {
 					System.out.println(media.getId() + ". " + media.toString());
 			}
 		}
+		
+		public ArrayList<Media> getItemsInStore(){
+			return itemsInStore;
+		}
 }
 		

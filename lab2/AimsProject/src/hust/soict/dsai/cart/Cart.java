@@ -2,7 +2,7 @@ package hust.soict.dsai.cart;
 
 import java.util.ArrayList;
 
-import hust.soict.dsai.aims.media.Media;
+import hust.soict.dsai.aims.media.*;
 
 public class Cart {
 	public static final int MAX_NUMBERS_ORDERED = 20;
@@ -18,12 +18,19 @@ public class Cart {
 			System.out.println("The quantity exceeds 20. ");
 	}
 	
-	public void removeMedia(Media media) {
-		if(itemsOrdered.remove(media)) {
+	public void removeMedia(int id) {
+		boolean found =false;
+		for(Media media : itemsOrdered)
+		{
+			if(media.getId() == id) {
 			System.out.println(media.getTitle() + " removed from the Cart.");
+			found = true;
+			break;
+			}
 		}
-		else 
-			System.out.println(media.getTitle() + " is not found in the Cart.");
+		if(!found) {
+			System.out.println("Media with id " + id + " is not found in the Cart.");
+		}
 	}
 	
 	/* Tinh tong tien */
@@ -75,12 +82,12 @@ public class Cart {
 		public void searchById(int id) {
 			for (Media media : itemsOrdered) {
 				if (media.getId() == id) {
-					System.out.println("DVD found: " + media.toString());
+					System.out.println("Media found: " + media.toString());
 					return;
 				}
 			}
 			// Neu khong co dvd thoa man
-			System.out.println("No matching DVD found with ID "+ id);
+			System.out.println("No matching Media found with ID "+ id);
 		}
 		
 		// Tim DVD bang Title
@@ -88,13 +95,35 @@ public class Cart {
 		        boolean found = false;
 		        for (Media media : itemsOrdered) {
 		            if (media.getTitle() == title ) {
-		                System.out.println("Matching DVD found: " + media.toString());
+		                System.out.println("Matching Media found: " + media.toString());
 		                found = true;
 		            }
 		        }
 		        if (!found) { // Neu khong co dvd thoa man
-		            System.out.println("No matching DVD found with Title " + title);
+		            System.out.println("No matching Media found with Title " + title);
 		        }
+		}
+		
+		// dem so DVD trong cart
+		public int getNumberOfDVDsInCart() {
+	        int dvdCount = 0;
+	        for (Media media : itemsOrdered) {
+	            if (media instanceof DigitalVideoDisc) {
+	                dvdCount++;
+	            }
+	        }
+	        return dvdCount;
+	    }
+		
+		// Empty cart
+		public void emptyCart() {
+			itemsOrdered.clear();
+			System.out.println("Your cart is empty now.");
+		}
+		
+		// getItemsOrdered method
+		public ArrayList<Media> getItemsOrdered() {
+			return itemsOrdered;
 		}
 }
 	

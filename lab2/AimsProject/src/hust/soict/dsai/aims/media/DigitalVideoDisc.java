@@ -26,8 +26,8 @@ public class DigitalVideoDisc extends Disc implements Playable{
 
 	//Tao chuc nang print cart 
 	public String toString() {
-			return String.format("DVD %s - %s - %s - %d minutes: %.2f $"
-					,getTitle(), getCategory(),getDirector(),getLength(),getCost());
+			return String.format("DVD %d. %s - %s - %s - %d minutes: %.2f $",
+					getId(),getTitle(), getCategory(),getDirector(),getLength(),getCost());
 	}
 	
 	public boolean isMatch(String titleToMatch) {

@@ -58,5 +58,16 @@ public class CompactDisc extends Disc implements Playable{
 	        for (Track track : tracks) {
 	            track.play();
 	        }
-	    }
+	 }
+	 
+	 // override toString
+	 public String toString() {
+			return String.format("CD %d. %s - %s - %s - %d minutes: %.2f $",
+					getId(),getTitle(), getCategory(),getArtist(), getLength(),getCost());
+	 }
+	 
+	 // lay tracks
+	 public ArrayList<Track> getTracks(){
+		 return tracks;
+	 }
 }
