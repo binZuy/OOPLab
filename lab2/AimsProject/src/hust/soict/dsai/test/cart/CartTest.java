@@ -28,7 +28,7 @@ public class CartTest {
         System.out.println("Search DVD by ID: 7");
         cart.searchById(7);
         System.out.println("Search DVD by Title: Avengers 2");
-        cart.searchByTitle("Avengers 2");
+        cart.searchByTitle("Avengers 1");
         System.out.println("Search DVD by Title: Avengers 4");
         cart.searchByTitle("Avengers 4");
 	}

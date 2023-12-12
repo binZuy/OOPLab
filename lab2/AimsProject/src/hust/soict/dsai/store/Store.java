@@ -12,7 +12,7 @@ public class Store {
 			itemsInStore = new  ArrayList<Media>();
 		}
 		
-		// Them DVD vao danh sach DVD trong cua hang
+		// Them DVD vao danh sach DVD trong cua hangD
 		public void addMedia(Media media) {
 				if(itemsInStore.add(media)) {
 				System.out.println("Media added to store: " + media.toString());

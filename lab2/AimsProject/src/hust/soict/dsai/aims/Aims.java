@@ -181,11 +181,12 @@ public class Aims {
         	System.out.println("Choose option from 0-1-2");
         	System.out.print("Your choice: ");
     		filterChoice = scanner.nextInt();
+    		scanner.nextLine();
     		switch(filterChoice) {
     		case 1: 
     			System.out.print("Enter the title: ");
-    			String title = scanner.nextLine();
-    			cart.searchByTitle(title);
+    			String title1 = scanner.nextLine();
+    			cart.searchByTitle(title1);
     			break;
     		case 2: 
     			System.out.print("Enter the id: ");

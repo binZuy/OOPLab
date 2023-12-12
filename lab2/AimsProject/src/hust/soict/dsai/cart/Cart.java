@@ -97,6 +97,7 @@ public class Cart {
 		            if (media.getTitle() == title ) {
 		                System.out.println("Matching Media found: " + media.toString());
 		                found = true;
+		                break;
 		            }
 		        }
 		        if (!found) { // Neu khong co dvd thoa man
