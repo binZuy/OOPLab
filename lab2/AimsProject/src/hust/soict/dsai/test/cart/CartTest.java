@@ -1,7 +1,7 @@
 package hust.soict.dsai.test.cart;
 
+import hust.soict.dsai.aims.media.DigitalVideoDisc;
 import hust.soict.dsai.cart.Cart;
-import hust.soict.dsai.disc.DigitalVideoDisc;
 
 public class CartTest {
 
@@ -21,7 +21,7 @@ public class CartTest {
         DigitalVideoDisc dvd6 = new DigitalVideoDisc("Avengers 3", 
         		"Action", "Joss Whedon", 87, 20.55f);	// Tao moi 1 dvd
         DigitalVideoDisc dvdList[] = {dvd1,dvd2,dvd3,dvd4,dvd5,dvd6};
-        cart.addDigitalVideoDisc(dvdList);	// Them 1 list dvd vao gio hang
+        cart.addMedia(dvdList);	// Them 1 list dvd vao gio hang
         cart.printCart();
         System.out.println("Search DVD by ID: 2");
         cart.searchById(2);

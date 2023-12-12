@@ -18,3 +18,52 @@ Question: Is JAVA a Pass By Value  or a Pass By Reference programming language?
     Cụ thể trong Lab 3: Title của 2 đối tượng jungleDVD và cinderellaDVD trong lớp TestPassingParameter với hàm swap cũng không thể thay đổi được title thực sự của đối tượng.
     Hàm swap không đổi là vì hàm này chỉ đổi chỗ 2 biến cục bộ mới được tạo của 2 đối tượng chứ không phải 2 đối tượng thực sự. 
     Hàm changeTitle chỉ làm thay đổi tiêu đề của bản sao jungleDVD bên trong chứ không làm thay đổi jungleDVD mà tham chiếu tới nên tiêu đề của biến jungleDVD bên trong phương thức. 
+
+************* LAB04 ************
+Question: 
+-	What class should implement the Comparable interface?
+-	In those classes, how should you implement the compareTo()method be to reflect the ordering that we want?
+-	Can we have two ordering rules of the item (by title then cost and by cost then title) if we use this Comparable interface approach?
+-	Suppose the DVDs has a different ordering rule from the other media types, that is by title, then decreasing length, then cost. How would you modify your code to allow this?
+
+1. Lớp đại diện cho các mục trong giỏ hàng nên triển khai giao diện Comparable. 
+Trong trường hợp này, có thể là lớp Media hoặc các lớp con của nó, phụ thuộc vào cách bạn tổ chức các lớp của mình.
+
+2. Phương thức compareTo() nên được triển khai để xác định thứ tự tự nhiên của các thể hiện của lớp. 
+Nó nên trả về một số nguyên âm, số không hoặc số nguyên dương nếu thể hiện hiện tại là ít hơn, bằng hoặc lớn hơn đối tượng được chỉ định tương ứng. 
+
+3. Không, giao diện Comparable xác định một thứ tự tự nhiên duy nhất cho lớp. 
+Nếu muốn hỗ trợ các quy tắc sắp xếp khác nhau, thông thường bạn sẽ sử dụng phương thức tiếp cận Comparator.
++ trả về <0 thì chuỗi gọi phương thức là từ vựng trước tiên
++ trả về == 0 thì hai chuỗi tương đương về mặt từ vựng
++ trả về> 0 thì tham số được truyền cho phương thức so sánh trước tiên là từ vựng.
+
+4. Để xử lý quy tắc sắp xếp khác biệt cho DVDs, bạn có thể tạo một comparator riêng cho DVDs và sử dụng nó khi cần thiết.
+public class DVDComparator implements Comparator<DVD> {
+    public int compare(DVD dvd1, DVD dvd2) {
+        int titleComparison = dvd1.getTitle().compareTo(dvd2.getTitle());
+
+        if (titleComparison == 0) {
+            // Nếu các tiêu đề giống nhau, so sánh theo chiều dài giảm dần
+            int lengthComparison = Integer.compare(dvd2.getLength(), dvd1.getLength());
+            
+            if (lengthComparison == 0) {
+                // Nếu chiều dài giống nhau, so sánh theo giá tăng dần
+                return Double.compare(dvd1.getCost(), dvd2.getCost());
+            }
+            
+            return lengthComparison;
+        }
+
+        return titleComparison;
+    }
+}
+
+// Trong lớp DVD:
+public class DVD extends Media implements Comparable<DVD> {
+    // ... các thuộc tính và phương thức khác ...
+
+    public int compareTo(DVD otherDVD) {
+        return new DVDComparator().compare(this, otherDVD);
+    }
+}

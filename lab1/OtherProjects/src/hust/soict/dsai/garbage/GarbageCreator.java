@@ -3,7 +3,7 @@ package hust.soict.dsai.garbage;
 import java.nio.file.Paths;
 import java.nio.file.Files;
 import java.io.IOException;
-import java.nio.file.Path;
+//import java.nio.file.Path;
 
 public class GarbageCreator {
 	public static void main(String[] args) {
@@ -16,7 +16,7 @@ public class GarbageCreator {
 		{
 		inputBytes = Files.readAllBytes(Paths.get(filename));
 		startTime = System.currentTimeMillis();
-		String  outputString = "";
+		String outputString = "";
 		for (byte b : inputBytes) {
 			outputString+=(char)(b & 0xFF);
 		}

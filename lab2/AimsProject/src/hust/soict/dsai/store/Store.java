@@ -1,36 +1,32 @@
 package hust.soict.dsai.store;
 
-import hust.soict.dsai.disc.DigitalVideoDisc;
+import java.util.ArrayList;
+
+import hust.soict.dsai.aims.media.Media;
+
 
 public class Store {
-		private DigitalVideoDisc[] itemsInStore;
-		private int itemCount;
+		private ArrayList<Media> itemsInStore = new ArrayList<Media>();
 		
 		public Store(int capacity) {// So luong DVD trong Cua hang
-			itemsInStore = new DigitalVideoDisc[capacity];
-			itemCount =0;
+			itemsInStore = new  ArrayList<Media>();
 		}
 		
 		// Them DVD vao danh sach DVD trong cua hang
-		public void addDVD(DigitalVideoDisc dvd) {
-			if (itemCount < itemsInStore.length) {
-				itemsInStore[itemCount++] = dvd;
-				System.out.println("DVD added to store: " + dvd.toString());
-			}
+		public void addMedia(Media media) {
+				if(itemsInStore.add(media)) {
+				System.out.println("Media added to store: " + media.toString());
+				}
 			else 
-				System.out.println("Store is full. Cannot add more DVDs.");
+				System.out.println("Store is full. Cannot add more.");
 		}
 		
 		// Xoa DVD trong danh sach cua cua hang
-		public void removeDVD(int id) {
-			for (int i =0 ; i<itemsInStore.length ; i++) {
-				if(itemsInStore[i] != null && itemsInStore[i].getId() == id) {
-					System.out.println("DVD removed from store: " + itemsInStore[i].toString());
-					for (int j =i; j <itemCount-1; j++) {
-						itemsInStore[j] = itemsInStore[j+1];
-					}
-					itemsInStore[itemCount-1] = null;
-					itemCount--;
+		public void removeMedia(int id) {
+			for (Media media : itemsInStore) {
+				if(media.getId() == id) {
+					itemsInStore.remove(media);
+					System.out.println("Media removed from store: " + media.toString());
 					return;
 				}
 			}
@@ -39,11 +35,14 @@ public class Store {
 		
 		// Hien thi so DVD trong cua hang
 		public void displayItemsInStore() {
-			for (int i = 0; i <itemCount ; i++) {
-				if (itemsInStore[i] != null) {
-					System.out.println((i+1) + ". " + itemsInStore[i].toString());
-				}
+			System.out.println("List in the store: ");
+			for (Media media: itemsInStore) { 
+					System.out.println(media.getId() + ". " + media.toString());
 			}
+		}
+		
+		public ArrayList<Media> getItemsInStore(){
+			return itemsInStore;
 		}
 }
 		
