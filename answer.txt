@@ -67,3 +67,20 @@ public class DVD extends Media implements Comparable<DVD> {
         return new DVDComparator().compare(this, otherDVD);
     }
 }
+
+************* LAB05 ************
+Question: The Aims class must be updated to handle any exceptions generated when the play() methods are called. 
+What happens when you don’t update for them to catch?
+Khi bạn không cập nhật lớp Aims để xử lý các ngoại lệ xuất hiện khi phương thức play() được gọi, những ngoại lệ này sẽ truyền lên ngăn xếp cuộc gọi. 
+Nếu một ngoại lệ không được bắt và xử lý ở mức độ phù hợp, điều này sẽ dẫn đến một ngoại lệ chưa được xử lý, thường dẫn đến việc chương trình bị chấm dứt và hiển thị thông báo lỗi.
+
+Dưới đây là những điều xảy ra khi một ngoại lệ không được bắt:
+
+Chấm Dứt Chương Trình: Nếu có một ngoại lệ xảy ra trong phương thức play() và không được bắt trong phương thức đó hoặc truyền lên để bắt ở mức độ mã nguồn cao hơn, chương trình sẽ kết thúc đột ngột.
+
+Thông Báo Lỗi: Hệ thống có thể hiển thị một thông báo lỗi bao gồm thông tin về loại ngoại lệ, vị trí xảy ra, và dòng ngăn xếp (một danh sách các cuộc gọi phương thức dẫn đến điểm ngoại lệ).
+
+Không Giải Phóng Tài Nguyên: Nếu phương thức play() liên quan đến bất kỳ tài nguyên nào như quản lý tệp, kết nối mạng hoặc các tài nguyên bên ngoại khác, chúng có thể không được giải phóng hoặc đóng đúng cách, dẫn đến rủi ro rò rỉ tài nguyên.
+
+Mất Đồng Nhất Dữ Liệu: Nếu phương thức play() là một phần của một hoạt động lớn hơn và có một ngoại lệ xảy ra, chương trình có thể bị để lại trong trạng thái không đồng nhất. 
+Dữ liệu có thể được xử lý một cách một phần hoặc để lại trong một trạng thái không mong muốn.

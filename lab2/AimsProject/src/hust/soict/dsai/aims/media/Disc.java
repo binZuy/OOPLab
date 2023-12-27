@@ -1,5 +1,7 @@
 package hust.soict.dsai.aims.media;
 
+import hust.soict.dsai.aims.exception.PlayerException;
+
 public class Disc extends Media{
 	private int length;
 	private String director;
@@ -28,6 +30,11 @@ public class Disc extends Media{
 	}
 	public String getDirector() {
 		return director;
+	}
+	@Override
+	public void play() throws PlayerException {
+		// TODO Auto-generated method stub
+		
 	}
 	
 }

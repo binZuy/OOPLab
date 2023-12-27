@@ -2,6 +2,9 @@ package hust.soict.dsai.aims;
 
 //import java.util.ArrayList;
 import java.util.Scanner;
+
+import javax.naming.LimitExceededException;
+
 import java.util.Collections;
 import hust.soict.dsai.aims.media.*;
 import hust.soict.dsai.cart.Cart;
@@ -128,7 +131,12 @@ public class Aims {
 		boolean found = false;
 		for (Media media : store.getItemsInStore()) {
 			if (media.getTitle().equalsIgnoreCase(title)) {
-				cart.addMedia(media);
+				try {
+					cart.addMedia(media);
+				} catch (LimitExceededException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
 				found = true;
 				break;
 			}

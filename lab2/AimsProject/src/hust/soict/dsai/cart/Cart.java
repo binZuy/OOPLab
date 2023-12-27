@@ -1,21 +1,30 @@
 package hust.soict.dsai.cart;
 
-import java.util.ArrayList;
+import javax.naming.LimitExceededException;
 
 import hust.soict.dsai.aims.media.*;
+import hust.soict.dsai.aims.screen.CartScreenController;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 
 public class Cart {
 	public static final int MAX_NUMBERS_ORDERED = 20;
-	private ArrayList<Media> itemsOrdered = new ArrayList<Media>();
+	private ObservableList<Media> itemsOrdered = FXCollections.observableArrayList();
+	private CartScreenController cartScreenController;
 	
+	public void setCartScreenController(CartScreenController cartScreenController) {
+        this.cartScreenController = cartScreenController;
+    }
 	// add Media and Remove Media methods
-	public void addMedia(Media media) {
-		if(itemsOrdered.size()<20) {
+	public void addMedia(Media media) throws LimitExceededException{
+		if(itemsOrdered.size()< MAX_NUMBERS_ORDERED) {
 			itemsOrdered.add(media);
 			System.out.println(media.getTitle() + " is added successfully.");
+		
 		}
-		else 
-			System.out.println("The quantity exceeds 20. ");
+		else {
+			throw new LimitExceededException("ERROR: The number of "+ "media has reached its limit");
+		}
 	}
 	
 	public void removeMedia(int id) {
@@ -25,12 +34,18 @@ public class Cart {
 			if(media.getId() == id) {
 			System.out.println(media.getTitle() + " removed from the Cart.");
 			found = true;
+			itemsOrdered.remove(media);
+			//notifyObservers();
 			break;
 			}
 		}
 		if(!found) {
 			System.out.println("Media with id " + id + " is not found in the Cart.");
 		}
+	}
+	
+	public void removeMedia(Media media) {
+		itemsOrdered.remove(media);
 	}
 	
 	/* Tinh tong tien */
@@ -123,8 +138,14 @@ public class Cart {
 		}
 		
 		// getItemsOrdered method
-		public ArrayList<Media> getItemsOrdered() {
+		public ObservableList<Media> getItemsOrdered() {
 			return itemsOrdered;
+		}
+		
+		private void notifyObservers() {
+			if (cartScreenController != null) {
+	            cartScreenController.updateTotalCost(this);
+	        }
 		}
 }
 	
