@@ -6,8 +6,17 @@
 		<item key="SmartImportRootWizardPage.STORE_NESTED_PROJECTS" value="true"/>
 		<item key="SmartImportRootWizardPage.STORE_CONFIGURE_NATURES" value="true"/>
 		<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+			<item value="C:\Users\duyng\OneDrive - Hanoi University of Science and Technology\Desktop\Java_OOP\BaoCaoOOP\oolt.vn.20231.20210270.nguyenminhduy\lab2\AimsProject"/>
 			<item value="C:\Users\duyng\OneDrive - Hanoi University of Science and Technology\Desktop\Java_OOP\BaoCaoOOP\oolt.vn.20231.20210270.nguyenminhduy"/>
 			<item value="C:\Users\duyng\OneDrive - Hanoi University of Science and Technology\Desktop\Java_OOP\BaoCaoOOP\oolt.vn.20231.20210270.nguyenminhduy\Lab1\src"/>
+		</list>
+	</section>
+	<section name="ChooseWorkspaceDialogSettings">
+		<item key="DIALOG_X_ORIGIN" value="238"/>
+		<item key="DIALOG_Y_ORIGIN" value="185"/>
+	</section>
+	<section name="WORKBENCH_SETTINGS">
+		<list key="ENABLED_TRANSFERS">
 		</list>
 	</section>
 </section>

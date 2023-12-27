@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 
+import hust.soict.dsai.aims.exception.PlayerException;
+
 public abstract class Media {
 	// them fields
 	private int id;
@@ -66,15 +68,12 @@ public abstract class Media {
 	}
 	
 	// Override equals method
-	public boolean equals(Object obj) {
-		if (this == obj) {
-			return true; 
+	public boolean equals(Object obj){
+		if(obj instanceof Media && obj!=null) {
+			Media m = (Media) obj;
+			return this.getTitle().equals(m.getTitle());
 		}
-		if (obj == null || getClass() != obj.getClass()) {
-			return false; 
-		}
-		Media otherMedia = (Media) obj;
-		return title != null ? title.equals(otherMedia.title) : otherMedia.title == null;
+		else return false;
 	}
 	
 	// override toString method
@@ -112,6 +111,8 @@ public abstract class Media {
             System.out.println(media.toString());
         }
 	}
+	
+	public abstract void play() throws PlayerException;
 }
 
 

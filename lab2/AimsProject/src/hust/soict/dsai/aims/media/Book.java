@@ -3,6 +3,8 @@ package hust.soict.dsai.aims.media;
 //import java.util.List;
 import java.util.ArrayList;
 
+import hust.soict.dsai.aims.exception.PlayerException;
+
 // Them 
 public class Book extends Media {
 		private ArrayList<String> authors = new ArrayList<String>();
@@ -66,5 +68,11 @@ public class Book extends Media {
 		
 		// Xem author sau khi xoa
 		System.out.println("Authors: "+ book.getAuthors());
+	}
+
+	@Override
+	public void play() throws PlayerException {
+		// TODO Auto-generated method stub
+		
 	}
 }
