@@ -3,6 +3,8 @@
 	<item key="org.eclipse.jdt.ui.last.selected.jre.kind2" value="2"/>
 	<item key="org.eclipse.jdt.ui.last.selected.execution.enviroment" value="JavaSE-20"/>
 	<item key="org.eclipse.jdt.ui.last.external.project" value="C:\Users\duyng\OneDrive - Hanoi University of Science and Technology\Desktop\Java_OOP\BaoCaoOOP\oolt.vn.20231.20210270.nguyenminhduy\lab5"/>
+	<item key="UserLibraryLoadSaveDialog.size" value="480,510"/>
+	<item key="org.eclipse.jdt.ui.lastextjar" value="D:\eclipse\JavaFXXX\openjfx-21.0.1_windows-x64_bin-sdk\javafx-sdk-21.0.1\lib"/>
 	<section name="org.eclipse.jdt.internal.ui.packageview.PackageExplorerPart">
 		<item key="group_libraries" value="true"/>
 		<item key="layout" value="2"/>
@@ -42,6 +44,6 @@
 		<item key="pageIndex" value="2"/>
 	</section>
 	<section name="ClasspathContainerSelectionPage">
-		<item key="index" value="0"/>
+		<item key="index" value="6"/>
 	</section>
 </section>
